@@ -25,6 +25,6 @@
 
 -[x] Make Change
 
--[] Return Coins
+-[x] Return Coins
 
 -[] Exact Change Only

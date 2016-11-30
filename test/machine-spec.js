@@ -48,47 +48,70 @@ describe('machine', ()=>{
   describe('.insertCoins(coins).selectProduct("chips").displayMessage()', ()=>{
 		it('Display proper message select in stock product with inadequate amoutn of money', ()=>{
 			coins = { quarters: 1 }
-			operations = machine.insertCoins(coins)
+			operation = machine.insertCoins(coins)
 												  .selectProduct('chips')
 												  .displayMessage()
 			msg = 'chips is $0.5, please insert $0.25'
-			expect(operations).to.equal(msg)
+			expect(operation).to.equal(msg)
 		})
 	})
 
   describe('.selectProduct("cola").displayMessage()', ()=>{
 		it('select product[out of sotck]', ()=>{
 			coins = { quarters: 1 }
-			operations = machine.insertCoins(coins)
+			operation = machine.insertCoins(coins)
 												  .selectProduct('cola')
 													.displayMessage()
 			msg = 'cola is out of stock'
-			expect(operations).to.equal(msg)
+			expect(operation).to.equal(msg)
 		})
 	})
 
   describe('.insertCoins(coins).selectProduct("chips").displayMessage()', ()=>{
 		it('select in stock product with sufficient amoutn of money', ()=>{
 			coins = { quarters: 4 }
-			operations = machine.insertCoins(coins)
+			operation = machine.insertCoins(coins)
 													.selectProduct('chips')
 													.displayMessage()
 			msg = 'chips is ready, you would have $0.5 return, Thank you ^_^'
-			expect(operations).to.equal(msg)
+			expect(operation).to.equal(msg)
 		})
 	})
 
   describe('.insertCoins(coins).returnCoins()', ()=>{
 		it('return coins button', ()=>{
 			coins = { quarters: 1, dimes : 1, nickels : 1, pennies : 2 }
-			operations = machine.insertCoins(coins).returnCoins()
-			expect(operations).to.eql(coins)
+			operation = machine.insertCoins(coins).returnCoins()
+			expect(operation).to.eql(coins)
 		})
 	})
+})
 
+describe('EXACT CHANGE ONLY', ()=>{
+	let machine, machineCoins, msg
 
-
-
-
-
+	beforeEach(()=>{
+		machine = ''
+		machineCoins = ''
+		msg = ''
+	})
+	it('should show INSERT COINT', ()=>{
+		machineCoins = {
+				quarters: 6,
+				nickels : 5,
+				dimes : 8
+		}
+		machine = new Machine(machineCoins)
+		msg = 'Hello, please insert coins'
+		expect(machine.displayMessage()).to.equal(msg)
+	})
+	it('should show EXACT CHANGE ONLY', ()=>{
+		machineCoins = {
+				quarters: 6,
+				nickels : 5,
+		}
+		machine = new Machine(machineCoins)
+		msg = 'EXACT COINT ONLY'
+		expect(machine.displayMessage()).to.equal(msg)
+	})
 })
