@@ -4,7 +4,9 @@ const expect = require('chai').expect
 describe('Vending Machine', ()=>{
 
   it('Machine', ()=>{
+
     let machine = new Machine
     expect(machine.displayMessage()).to.equal('INSERT COIN')
+    
   })
 })

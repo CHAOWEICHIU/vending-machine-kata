@@ -11,14 +11,20 @@
 ## Get started
 
 > npm install
+
 > npm run test
 
 
 ## TODO List
 
 -[] Accept Coins
+
 -[] Select Product
+
 -[] Make Change
+
 -[] Return Coins
+
 -[] Sold Out
+
 -[] Exact Change Only
