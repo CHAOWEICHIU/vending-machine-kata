@@ -1,0 +1,15 @@
+{
+  "name": "vending-machine",
+  "version": "1.0.0",
+  "description": "kata",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/machine-spec.js"
+  },
+  "author": "chao wei chiu",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
