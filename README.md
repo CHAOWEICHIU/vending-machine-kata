@@ -21,10 +21,10 @@
 
 -[x] Select Product
 
--[] Make Change
+-[x] Sold Out
+
+-[x] Make Change
 
 -[] Return Coins
-
--[] Sold Out
 
 -[] Exact Change Only

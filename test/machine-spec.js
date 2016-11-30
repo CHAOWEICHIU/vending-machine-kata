@@ -67,6 +67,17 @@ describe('machine', ()=>{
 		})
 	})
 
+  describe('.insertCoins(coins).selectProduct("chips").displayMessage()', ()=>{
+		it('select in stock product with sufficient amoutn of money', ()=>{
+			coins = { quarters: 4 }
+			operations = machine.insertCoins(coins)
+													.selectProduct('chips')
+													.displayMessage()
+			msg = 'chips is ready, you would have $0.5 return, Thank you ^_^'
+			expect(operations).to.equal(msg)
+		})
+	})
+
 
 
 
