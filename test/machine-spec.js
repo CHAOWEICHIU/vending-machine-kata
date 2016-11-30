@@ -1,12 +1,18 @@
+'use strict'
 const expect = require('chai').expect
     , Machine = require('../lib/machine')
 
 describe('machine', ()=>{
 
-  let machine, coins, msg, operation
+  let machine, coins, msg, operation, machineCoins
 
   beforeEach(()=>{
-    machine = new Machine
+    machineCoins = {
+				quarters: 10,
+				nickels : 10,
+				dimes   : 10
+		}
+    machine = new Machine(machineCoins)
     coins = ''
     msg = ''
     operation = ''
@@ -102,7 +108,7 @@ describe('EXACT CHANGE ONLY', ()=>{
 				dimes : 8
 		}
 		machine = new Machine(machineCoins)
-		msg = 'Hello, please insert coins'
+		msg = 'INSERT COIN'
 		expect(machine.displayMessage()).to.equal(msg)
 	})
 	it('should show EXACT CHANGE ONLY', ()=>{
