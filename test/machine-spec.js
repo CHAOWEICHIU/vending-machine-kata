@@ -13,7 +13,6 @@ describe('machine', ()=>{
 
   describe('.displayMessage()', ()=>{
     it('INSERT COIN without inserting coin', ()=>{
-
       expect(machine.displayMessage()).to.equal('INSERT COIN')
     })
   })
@@ -25,7 +24,6 @@ describe('machine', ()=>{
 			expect(machine.insertCoins(coins).displayMessage()).to.equal(msg)
 		})
 	})
-
 
 
 })

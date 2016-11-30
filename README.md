@@ -17,7 +17,7 @@
 
 ## TODO List
 
--[] Accept Coins
+-[x] Accept Coins
 
 -[] Select Product
 
