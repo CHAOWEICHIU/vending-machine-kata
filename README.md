@@ -27,4 +27,4 @@
 
 -[x] Return Coins
 
--[] Exact Change Only
+-[x] Exact Change Only
