@@ -45,5 +45,16 @@ describe('machine', ()=>{
 		})
 	})
 
+  describe('.selectProduct("cola").displayMessage()', ()=>{
+		it('select product[out of sotck]', ()=>{
+			coins = { quarters: 1 }
+			operations = machine.insertCoins(coins)
+												  .selectProduct('cola')
+													.displayMessage()
+			msg = 'cola is out of stock'
+			expect(operations).to.equal(msg)
+		})
+	})
+
 
 })
