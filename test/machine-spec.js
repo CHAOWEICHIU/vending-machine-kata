@@ -78,6 +78,13 @@ describe('machine', ()=>{
 		})
 	})
 
+  describe('.insertCoins(coins).returnCoins()', ()=>{
+		it('return coins button', ()=>{
+			coins = { quarters: 1, dimes : 1, nickels : 1, pennies : 2 }
+			operations = machine.insertCoins(coins).returnCoins()
+			expect(operations).to.eql(coins)
+		})
+	})
 
 
 
