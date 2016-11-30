@@ -25,5 +25,12 @@ describe('machine', ()=>{
 		})
 	})
 
+  describe('.selectProduct()', ()=>{
+		it('Display proper message after Select Product without selecting a product', ()=>{
+			msg = 'cola: $1 [out of stock], chips: $0.5 [in stock], candy: $0.65 [in stock]'
+			expect(machine.selectProduct()).to.equal(msg)
+		})
+	})
+
 
 })
