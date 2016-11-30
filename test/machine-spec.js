@@ -32,5 +32,13 @@ describe('machine', ()=>{
 		})
 	})
 
+  describe('.selectProduct("chips").displayMessage()', ()=>{
+		it('Display proper message after selected product[in stock] with inadequate amoutn of money', ()=>{
+			operations = machine.selectProduct('chips').displayMessage()
+			msg = 'chips is $0.5, please insert $0.5'
+			expect(operations).to.equal(msg)
+		})
+	})
+
 
 })
