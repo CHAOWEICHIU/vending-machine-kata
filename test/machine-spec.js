@@ -45,6 +45,17 @@ describe('machine', ()=>{
 		})
 	})
 
+  describe('.insertCoins(coins).selectProduct("chips").displayMessage()', ()=>{
+		it('Display proper message select in stock product with inadequate amoutn of money', ()=>{
+			coins = { quarters: 1 }
+			operations = machine.insertCoins(coins)
+												  .selectProduct('chips')
+												  .displayMessage()
+			msg = 'chips is $0.5, please insert $0.25'
+			expect(operations).to.equal(msg)
+		})
+	})
+
   describe('.selectProduct("cola").displayMessage()', ()=>{
 		it('select product[out of sotck]', ()=>{
 			coins = { quarters: 1 }
@@ -55,6 +66,11 @@ describe('machine', ()=>{
 			expect(operations).to.equal(msg)
 		})
 	})
+
+
+
+
+
 
 
 })
