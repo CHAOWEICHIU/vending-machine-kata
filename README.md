@@ -19,7 +19,7 @@
 
 -[x] Accept Coins
 
--[] Select Product
+-[x] Select Product
 
 -[] Make Change
 
